@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-key */
-import styled from 'styled-components';
+import styled from "styled-components";
 const Buttons = (props) => {
   return (
     <ButtonWrapper>
@@ -7,7 +7,9 @@ const Buttons = (props) => {
         className="grid-item"
         id="equals"
         onClick={props.getSum}
-        style={{ gridArea: "equals", backgroundColor: '#ff471a',color: 'white'}}
+        style={{
+          gridArea: "equals", fontWeight: '900'
+        }}
       >
         =
       </Button>
@@ -17,7 +19,7 @@ const Buttons = (props) => {
           id={item.name}
           value={item.number}
           onClick={props.handleValue}
-          style={{ gridArea: item.name }}
+          style={{ gridArea: item.name, borderRight: '1px ridge #03163e' }}
         >
           {item.number}
         </Button>
@@ -26,7 +28,7 @@ const Buttons = (props) => {
         className="grid-item"
         id="add"
         onClick={props.handleAddition}
-        style={{ gridArea: "add" }}
+        style={{ gridArea: "add", fontWeight: '900'}}
       >
         +
       </Button>
@@ -34,7 +36,7 @@ const Buttons = (props) => {
         className="grid-item"
         id="subtract"
         onClick={props.handleSubtraction}
-        style={{ gridArea: "subtract" }}
+        style={{ gridArea: "subtract", fontWeight: '900' }}
       >
         -
       </Button>
@@ -42,7 +44,7 @@ const Buttons = (props) => {
         className="grid-item"
         id="multiply"
         onClick={props.handleMultiplication}
-        style={{ gridArea: "multiply" }}
+        style={{ gridArea: "multiply", fontWeight: '900'}}
       >
         *
       </Button>
@@ -50,7 +52,7 @@ const Buttons = (props) => {
         className="grid-item"
         id="divide"
         onClick={props.handleDivision}
-        style={{ gridArea: "divide" }}
+        style={{ gridArea: "divide", fontWeight: '900', borderRight: '1px ridge #03163e'}}
       >
         /
       </Button>
@@ -58,7 +60,7 @@ const Buttons = (props) => {
         className="grid-item"
         id="decimal"
         onClick={props.addDecimal}
-        style={{ gridArea: "decimal" }}
+        style={{ gridArea: "decimal", fontWeight: '900',borderRight: '1px ridge #03163e'  }}
       >
         .
       </Button>
@@ -66,7 +68,7 @@ const Buttons = (props) => {
         className="grid-item"
         id="clear"
         onClick={props.handleClear}
-        style={{ gridArea: "AC", backgroundColor: '#ff471a',color: 'white' }}
+        style={{ gridArea: "AC", borderRight: '1px ridge #03163e'}}
       >
         AC
       </Button>
@@ -76,7 +78,8 @@ const Buttons = (props) => {
 
 const ButtonWrapper = styled.div`
   display: grid;
-  height: 400px;
+  height: 300px;
+  background: linear-gradient(to left, #03163E 0%, #225D6F 100%);
   grid:
     "AC AC divide multiply"
     "seven eight nine subtract"
@@ -86,14 +89,18 @@ const ButtonWrapper = styled.div`
 `;
 
 const Button = styled.button`
-  font-family: 'Century';
-  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  background: none;
+  font-weight: 500;
+  color: white;
   font-size: 19px;
-  border: 2px solid black;
-  border-radius: 30px;
-  margin: 1px;
-    &:active{
-        background-color: #ff471a;
-    }
-`
+  border: none;
+  border-top: 1px ridge #03163e;
+
+  border-radius: 0px;
+  &:active {
+    background-color: #133b53;
+  }
+
+`;
 export default Buttons;

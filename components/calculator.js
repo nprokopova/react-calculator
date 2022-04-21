@@ -177,14 +177,16 @@ const Calculator = () => {
 };
 
 const Wrapper = styled.div`
+  background: linear-gradient(to left, #03163E 0%, #225D6F 100%);
+  margin-top: 20px;
   display: flex;
-  width: 260px;
+  width: 240px;
   height: 400px;
   flex-direction: column;
   justify-content: center;
-  padding: 10px;
-  background-color: #1d3030;
-  border: 4px solid black;
-  border-radius: 10px;
+  padding: 0px;
+  color: white;
+  padding: 3px;
+  border-radius: 3px;
 `;
 export default Calculator;

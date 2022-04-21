@@ -13,29 +13,29 @@ const Display = (props) => {
 };
 
 const DisplayWrapper = styled.div`
-  font-family: 'Century';
-  background-color: black;
-  color: white;
+  background: linear-gradient(to left, #03163E 0%, #225D6F 100%);
+  color: inherit;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  height: 70px;
-  padding-bottom: 10px;
-  border-radius: 9px;
-  margin-bottom: 10px;
+  height: 100px;
 `
 const DisplayAll = styled.p`
   height: 30px;
-  margin: 10px;
+  margin: 15px;
+  margin-bottom: 0px;
+  text-align: right;
   word-break: break-all;
-  font-size: ${props=>(15-(props.displayAll.length/8))/16}rem;
+  font-size: ${props=>(16-(props.displayAll.length/15))/16}rem;
   padding: 0px;
-  color: white;
 `
 const DisplayCurrent = styled.p`
-  margin: 10px;
+  margin: 15px;
+  font-weight: 600;
+  margin-top: 5px;
   word-break: break-all;
-  font-size:  ${props=>(20-(props.display.length/5))/16}rem;
+  text-align: right;
+  font-size:  ${props=>(25-(props.display.length/3))/16}rem;
   padding: 0px;
 `
 export default Display;
