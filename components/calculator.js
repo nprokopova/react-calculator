@@ -177,7 +177,7 @@ const Calculator = () => {
 };
 
 const Wrapper = styled.div`
-  background: linear-gradient(to left, #03163E 0%, #225D6F 100%);
+  background: linear-gradient(to left, #03163E 0%, #47acc9 100%);
   margin-top: 20px;
   display: flex;
   width: 240px;
@@ -187,6 +187,6 @@ const Wrapper = styled.div`
   padding: 0px;
   color: white;
   padding: 3px;
-  border-radius: 3px;
+  border-radius: 5px;
 `;
 export default Calculator;

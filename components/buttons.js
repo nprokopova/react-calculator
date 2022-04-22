@@ -79,7 +79,7 @@ const Buttons = (props) => {
 const ButtonWrapper = styled.div`
   display: grid;
   height: 300px;
-  background: linear-gradient(to left, #03163E 0%, #225D6F 100%);
+  background: none;
   grid:
     "AC AC divide multiply"
     "seven eight nine subtract"
@@ -98,8 +98,8 @@ const Button = styled.button`
   border-top: 1px ridge #03163e;
 
   border-radius: 0px;
-  &:active {
-    background-color: #133b53;
+  &:hover{
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 12px;
   }
 
 `;

@@ -13,7 +13,7 @@ const Display = (props) => {
 };
 
 const DisplayWrapper = styled.div`
-  background: linear-gradient(to left, #03163E 0%, #225D6F 100%);
+  background: none;
   color: inherit;
   display: flex;
   flex-direction: column;
