@@ -1,19 +1,11 @@
 /* eslint-disable react/jsx-key */
 import styled from "styled-components";
+import { NUMBERS } from "../constants/numbers";
+
 const Buttons = (props) => {
   return (
     <ButtonWrapper>
-      <Button
-        className="grid-item"
-        id="equals"
-        onClick={props.getSum}
-        style={{
-          gridArea: "equals", fontWeight: '900'
-        }}
-      >
-        =
-      </Button>
-      {props.numberArray.map((item) => (
+      {NUMBERS.map((item) => (
         <Button
           className="grid-item"
           id={item.name}
@@ -24,6 +16,16 @@ const Buttons = (props) => {
           {item.number}
         </Button>
       ))}
+      <Button
+        className="grid-item"
+        id="equals"
+        onClick={props.getSum}
+        style={{
+          gridArea: "equals", fontWeight: '900'
+        }}
+      >
+        =
+      </Button>
       <Button
         className="grid-item"
         id="add"
@@ -103,4 +105,5 @@ const Button = styled.button`
   }
 
 `;
+
 export default Buttons;
