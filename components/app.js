@@ -5,7 +5,7 @@ import { Wrapper } from "./wrapper";
 
 const App = () =>
 <Wrapper>
-<Header title="Immediate execution calculator"/>
+<Header title=""/>
 <Calculator/>
 </Wrapper>
 

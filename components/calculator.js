@@ -3,6 +3,7 @@ import Buttons from "./buttons";
 import Display from "./display";
 import styled from "styled-components";
 
+
 const Calculator = () => {
   const [numberString, setNumberString] = useState("");
   const [sum, setSum] = useState(0);
@@ -121,6 +122,7 @@ const Calculator = () => {
 
   return (
     <Wrapper>
+
       <Display
         display={display}
         numList={numList}
@@ -143,16 +145,16 @@ const Calculator = () => {
 
 const Wrapper = styled.div`
   background: linear-gradient(to bottom left, #03163e 0%, #47acc9 100%);
-  margin-top: 20px;
   display: flex;
   width: 240px;
   height: 400px;
   flex-direction: column;
   justify-content: center;
-  padding: 0px;
   color: white;
   padding: 3px;
+  margin-bottom: 20px;
   border-radius: 5px;
+
 `;
 
 export default Calculator;

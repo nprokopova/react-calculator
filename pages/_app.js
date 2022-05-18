@@ -6,6 +6,9 @@ const GlobalStyles = createGlobalStyle`
     font-family:'Montserrat', sans-serif;
     display: flex;
     justify-content: center;
+    align-items: center;
+    margin: 0px;
+
   }
 `;
 function MyApp({ Component, pageProps }) {
