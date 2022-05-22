@@ -21,7 +21,8 @@ const Buttons = (props) => {
         id="equals"
         onClick={props.getSum}
         style={{
-          gridArea: "equals", fontWeight: '900'
+          gridArea: "equals", fontWeight: '900',
+          borderBottomRightRadius: '5px'
         }}
       >
         =
@@ -98,10 +99,9 @@ const Button = styled.button`
   font-size: 19px;
   border: none;
   border-top: 1px ridge #03163e;
-
-  border-radius: 0px;
+  border-bottom-left-radius: ${props=>props.id==='zero'? 5: 0}px;
   &:hover{
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 12px;
+    box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.5);
   }
 
 `;

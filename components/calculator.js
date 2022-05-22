@@ -151,7 +151,6 @@ const Wrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   color: white;
-  padding: 3px;
   margin-bottom: 20px;
   border-radius: 5px;
 
