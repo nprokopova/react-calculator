@@ -36,16 +36,16 @@ const Calculator = () => {
 
     setDisplay("+");
     setNumberString("");
-    setDisplayAll(displayAll + " + ");
+    isNaN(display)? setDisplayAll(displayAll.replace(/\W+/, " + ")) : setDisplayAll(displayAll + " + ");
   };
 
   const handleSubtraction = () => {
-    isNaN(display) ? setNumList(numList + "-") : setNumList(numList + " - ");
-
+    isNaN(display) ? setNumList(numList + '-')
+        : setNumList(numList + " - ");
     setNumberString("");
     setDisplay("-");
-    setDisplayAll(displayAll + " - ");
-  };
+    setDisplayAll(displayAll + ' - ');
+};
 
   const handleMultiplication = () => {
     display === "-"
@@ -56,19 +56,19 @@ const Calculator = () => {
 
     setNumberString("");
     setDisplay("*");
-    setDisplayAll(displayAll + " * ");
+    isNaN(display)? setDisplayAll(displayAll.replace(/\W+/, " * ")) : setDisplayAll(displayAll + " * ");
   };
 
   const handleDivision = () => {
     display === "-"
       ? setNumList(numList.replace(/\W+/, " / "))
       : isNaN(display)
-      ? setNumList(numList.replace(display, " / "))
+      ? setNumList(numList.replace(display, "/"))
       : setNumList(numList + " / ");
 
     setNumberString("");
     setDisplay("/");
-    setDisplayAll(displayAll + " / ");
+    isNaN(display)? setDisplayAll(displayAll.replace(/\W+/, " / ")) : setDisplayAll(displayAll + " / ");
   };
 
   const addDecimal = () => {
@@ -147,7 +147,7 @@ const Wrapper = styled.div`
   background: linear-gradient(to bottom left, #03163e 0%, #47acc9 100%);
   display: flex;
   width: 240px;
-  height: 400px;
+  height: 410px;
   flex-direction: column;
   justify-content: center;
   color: white;
