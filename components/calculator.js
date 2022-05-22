@@ -107,7 +107,7 @@ const Calculator = () => {
     });
 
     setSum(newSum);
-    setDisplay(newSum);
+    setDisplay(`${newSum}`);
     setNumList(newSum);
     setDisplayAll(displayAll + " = " + newSum);
   };
