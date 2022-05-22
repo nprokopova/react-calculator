@@ -147,13 +147,10 @@ const Wrapper = styled.div`
   background: linear-gradient(to bottom left, #03163e 0%, #47acc9 100%);
   display: flex;
   width: 240px;
-  height: 410px;
   flex-direction: column;
   justify-content: center;
   color: white;
-  margin-bottom: 20px;
   border-radius: 5px;
-
 `;
 
 export default Calculator;
