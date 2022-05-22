@@ -14,18 +14,18 @@ const DisplayWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  height: 100px;
+  justify-content:space-between;
+  height: 105px;
 `;
 
 const DisplayAll = styled.p`
-  height: 30px;
   margin: 15px;
+  height: 30px;
   margin-right: 22px;
-  margin-bottom: 0px;
   text-align: right;
   word-break: break-all;
   font-size: ${(props) => (16 - props.displayAll.length / 15) / 16}rem;
-  padding: 0px;
+
 `;
 
 const DisplayCurrent = styled.p`
@@ -36,7 +36,6 @@ const DisplayCurrent = styled.p`
   word-break: break-all;
   text-align: right;
   font-size: ${(props) => (25 - props.display.length / 3) / 16}rem;
-  padding: 0px;
 `;
 
 export default Display;
