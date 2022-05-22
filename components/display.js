@@ -15,13 +15,12 @@ const DisplayWrapper = styled.div`
   flex-direction: column;
   align-items: flex-end;
   justify-content:space-between;
-  height: 105px;
+  height: 107px;
 `;
 
 const DisplayAll = styled.p`
   margin: 15px;
   height: 30px;
-  margin-right: 22px;
   text-align: right;
   word-break: break-all;
   font-size: ${(props) => (16 - props.displayAll.length / 15) / 16}rem;
@@ -30,12 +29,11 @@ const DisplayAll = styled.p`
 
 const DisplayCurrent = styled.p`
   margin: 15px;
-  margin-right: 22px;
   font-weight: 600;
   margin-top: 5px;
   word-break: break-all;
   text-align: right;
-  font-size: ${(props) => (25 - props.display.length / 3) / 16}rem;
+  font-size: ${(props) => (24 - props.display.length / 3) / 16}rem;
 `;
 
 export default Display;
