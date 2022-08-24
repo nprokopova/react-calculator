@@ -15,7 +15,7 @@ const DisplayWrapper = styled.div`
   flex-direction: column;
   align-items: flex-end;
   justify-content:space-between;
-  height: 107px;
+  height: 130px;
 `;
 
 const DisplayAll = styled.p`

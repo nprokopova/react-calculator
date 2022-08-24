@@ -96,7 +96,7 @@ const Button = styled.button`
   background: none;
   font-weight: 500;
   color: white;
-  font-size: 19px;
+  font-size: 20px;
   border: none;
   border-top: 1px ridge #03163e;
   border-bottom-left-radius: ${props=>props.id==='zero'? 5: 0}px;

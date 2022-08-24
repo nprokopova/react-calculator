@@ -146,7 +146,7 @@ const Calculator = () => {
 const Wrapper = styled.div`
   background: linear-gradient(to bottom left, #03163e 0%, #47acc9 100%);
   display: flex;
-  width: 300px;
+  width: 280px;
   height: 490px;
   flex-direction: column;
   justify-content: center;
