@@ -81,7 +81,7 @@ const Buttons = (props) => {
 
 const ButtonWrapper = styled.div`
   display: grid;
-  height: 300px;
+  height: 80%;
   background: none;
   grid:
     "AC AC divide multiply"
