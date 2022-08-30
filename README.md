@@ -5,7 +5,7 @@ https://react-calculator-two-chi.vercel.app/
 
 ## Description
 
-Immediate execution calculator initially created for the FreeCodeCamp Front End Libraries certification. 
+A formula logic calculator initially created for the FreeCodeCamp Front End Libraries certification. 
 
 The project was initially done on CodePen and was later migrated to Next.js and refactored.
 
