@@ -49,7 +49,7 @@ const Buttons = (props) => {
         onClick={props.handleMultiplication}
         style={{ gridArea: "multiply", fontWeight: '900'}}
       >
-        *
+        X
       </Button>
       <Button
         className="grid-item"

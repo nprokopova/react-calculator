@@ -9,6 +9,7 @@ const Display = ({ display, displayAll }) => (
 );
 
 const DisplayWrapper = styled.div`
+  margin-right: 9px;
   background: none;
   color: inherit;
   display: flex;
