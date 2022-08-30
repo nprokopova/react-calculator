@@ -3,7 +3,6 @@ import Buttons from "./buttons";
 import Display from "./display";
 import styled from "styled-components";
 
-
 const Calculator = () => {
   const [numberString, setNumberString] = useState("");
   const [sum, setSum] = useState(0);
@@ -36,16 +35,17 @@ const Calculator = () => {
 
     setDisplay("+");
     setNumberString("");
-    isNaN(display)? setDisplayAll(displayAll.replace(/\W+/, " + ")) : setDisplayAll(displayAll + " + ");
+    isNaN(display)
+      ? setDisplayAll(displayAll.replace(/\W+/, " + "))
+      : setDisplayAll(displayAll + " + ");
   };
 
   const handleSubtraction = () => {
-    isNaN(display) ? setNumList(numList + '-')
-        : setNumList(numList + " - ");
+    isNaN(display) ? setNumList(numList + "-") : setNumList(numList + " - ");
     setNumberString("");
     setDisplay("-");
-    setDisplayAll(displayAll + ' - ');
-};
+    setDisplayAll(displayAll + " - ");
+  };
 
   const handleMultiplication = () => {
     display === "-"
@@ -56,7 +56,9 @@ const Calculator = () => {
 
     setNumberString("");
     setDisplay("*");
-    isNaN(display)? setDisplayAll(displayAll.replace(/\W+/, " * ")) : setDisplayAll(displayAll + " * ");
+    isNaN(display)
+      ? setDisplayAll(displayAll.replace(/\W+/, " * "))
+      : setDisplayAll(displayAll + " * ");
   };
 
   const handleDivision = () => {
@@ -68,7 +70,9 @@ const Calculator = () => {
 
     setNumberString("");
     setDisplay("/");
-    isNaN(display)? setDisplayAll(displayAll.replace(/\W+/, " / ")) : setDisplayAll(displayAll + " / ");
+    isNaN(display)
+      ? setDisplayAll(displayAll.replace(/\W+/, " / "))
+      : setDisplayAll(displayAll + " / ");
   };
 
   const addDecimal = () => {
@@ -97,10 +101,31 @@ const Calculator = () => {
             newSum -= Number(item);
             break;
           case "*":
-            newSum *= Number(item);
+            if (array[index - 3] === "+") {
+              newSum -= Number(array[index - 2]);
+              newSum += Number(array[index - 2]) * Number(item);
+            } else if (array[index - 3] === "-") {
+              newSum += Number(array[index - 2]);
+              newSum -= Number(array[index - 2]) * Number(item);
+            } else if (array[index - 3] === "*" || array[index - 3] === "/") {
+              newSum *= Number(item);
+            } else {
+              newSum = Number(array[index - 2]) * Number(item);
+            }
             break;
           case "/":
-            newSum /= Number(item);
+            if (Number(item) === 0) break;
+            if (array[index - 3] === "+") {
+              newSum -= Number(array[index - 2]);
+              newSum += Number(array[index - 2]) / Number(item);
+            } else if (array[index - 3] === "-") {
+              newSum += Number(array[index - 2]);
+              newSum -= Number(array[index - 2]) / Number(item);
+            } else if (array[index - 3] === "*" || array[index - 3] === "/") {
+              newSum /= Number(item);
+            } else {
+              newSum = Number(array[index - 2]) / Number(item);
+            }
             break;
         }
       }
@@ -108,7 +133,7 @@ const Calculator = () => {
 
     setSum(newSum);
     setDisplay(`${newSum}`);
-    setNumList(newSum);
+    setNumList(`${newSum}`);
     setDisplayAll(displayAll + " = " + newSum);
   };
 
@@ -122,7 +147,6 @@ const Calculator = () => {
 
   return (
     <Wrapper>
-
       <Display
         display={display}
         numList={numList}
@@ -152,7 +176,6 @@ const Wrapper = styled.div`
   justify-content: center;
   color: white;
   border-radius: 5px;
-
 `;
 
 export default Calculator;
