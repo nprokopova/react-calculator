@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Buttons from "./buttons";
+import ButtonGrid from "./buttonGrid";
 import Display from "./display";
 import styled from "styled-components";
 
@@ -153,7 +153,7 @@ const Calculator = () => {
         displayAll={displayAll}
         sum={sum}
       />
-      <Buttons
+      <ButtonGrid
         handleValue={handleValue}
         handleAddition={handleAddition}
         handleSubtraction={handleSubtraction}
